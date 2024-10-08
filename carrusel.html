@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carrusel de Productos</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="mapa.html">Ubicación</a></li>
+            <li><a href="suscripcion.html">Suscripción</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Nuestros Productos Destacados</h1>
+        <div class="carrusel">
+            <img src="https://via.placeholder.com/600x400?text=Producto+1" alt="Producto 1" class="active">
+            <img src="https://via.placeholder.com/600x400?text=Producto+2" alt="Producto 2">
+            <img src="https://via.placeholder.com/600x400?text=Producto+3" alt="Producto 3">
+            <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+            <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Puerto Madero</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        header { text-align: center; padding: 10px; }
+        footer { text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mapa de Puerto Madero</h1>
+    <a href="index.html">Volver a la página principal</a>
+</header>
+
+<div id="map"></div>
+
+<footer>
+    <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+</footer>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNwYWRhdmUiLCJhIjoiY20xemw3ZTVpMDAxZTJqb3BxcTlnYWJzcSJ9.qOYWTWDuFyYC8eGJmXSBpA';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-58.3665, -34.6103], // Coordenadas de Puerto Madero
+        zoom: 14
+    });
+
+    // Agregar un marcador
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-58.3665, -34.6103]) // Coordenadas del marcador
+        .setPopup(new mapboxgl.Popup().setHTML("<h3>Puerto Madero</h3><p>Una hermosa zona de Buenos Aires.</p>")) // Opcional: popup
+        .addTo(map);
+</script>
+
+</body>
+</html>
